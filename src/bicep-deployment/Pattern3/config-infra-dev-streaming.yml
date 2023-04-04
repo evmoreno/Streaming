@@ -4,18 +4,18 @@ variables:
   ap_vm_image: windows-2019
   ap_vm_image_ubuntu: ubuntu-latest
   location: eastus
-  prefix: fasthack
-  postfix: uc35
+  prefix: opt
+  postfix: dev01
   environment: dev
 
 
   # Azure DevOps 
-  ado_service_connection_rg: Azure-ARM-Dev-SAPA
+  ado_service_connection_rg: AzureConnect
 
 
   # IaC
   baseName: $(prefix)$(postfix)$(environment)
-  resourceGroupName: "InsightsVue-Group" #You also need to change the ResourceGroupname in main.bicep file
+  resourceGroupName: 'InsightsVue-Group' #You also need to change the ResourceGroupname in main.bicep file
   dataLakeAccountName: $(prefix)adl$(postfix)$(environment)
   synapseWorkspace: $(prefix)-synapse-$(postfix)$(environment)
   synapsedatalakegen2name: $(prefix)adlssyn$(postfix)$(environment)
