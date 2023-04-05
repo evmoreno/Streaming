@@ -10,7 +10,7 @@ variables:
 
 
   # Azure DevOps 
-  ado_service_connection_rg: AzureConnect
+  ado_service_connection_rg: ARM-Connect
 
 
   # IaC
